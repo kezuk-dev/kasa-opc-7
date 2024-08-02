@@ -1,0 +1,46 @@
+.caroussel.container {
+    position: relative;
+    width: 100%;
+    height: 415px;
+}
+
+.caroussel.image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.caroussel.arrow {
+    position: absolute;
+    line-height: 100%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: white;
+}
+
+.caroussel.arrow.left {
+    top: 50%;
+    left: 10px;
+}
+
+.caroussel.arrow.right {
+    top: 50%;
+    right: 10px;
+}
+
+.caroussel.count {
+    position: absolute;
+    color: white;
+    font-size: 0.75rem;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media screen and (max-width: 799px) {
+    .caroussel.container {
+        height: 255px;
+    }
+}

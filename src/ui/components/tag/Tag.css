@@ -1,0 +1,23 @@
+.tag.container {
+    width: 115px;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    height: fit-content;
+    flex-grow: 0;
+
+}
+
+.tag.name {
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+    color: white;
+    padding: 5px 0;
+}
+
+
+@media screen and (max-width: 799px) {
+    .tag.container {
+        width: 84px; 
+    }
+}

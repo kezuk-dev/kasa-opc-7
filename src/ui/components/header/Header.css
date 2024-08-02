@@ -1,0 +1,41 @@
+.header.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 100px;
+    width: calc(100% - 200px);
+}
+
+.header.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header.link {
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.header.link.open {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 799px) {
+    .header.container {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .header.logo {
+        width: 120px;
+    }
+
+    .header.link {
+        text-transform: uppercase;
+    }
+}

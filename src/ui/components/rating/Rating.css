@@ -1,0 +1,15 @@
+.rating.container {
+    display: flex;
+    flex-direction: row;
+    gap: 0 5px;
+}
+
+.rating.star::after {
+    content: '\2605';
+    color: #f3f3f3;
+    font-size: 1.5rem;
+}
+
+.rating.star.main-color::after {
+    color: var(--main-color);
+}

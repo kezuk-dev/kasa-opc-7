@@ -1,0 +1,43 @@
+.profil.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.profil.name {
+    position: absolute;
+    top: 50%;
+    right: 74px;
+    transform: translateY(-50%);
+    text-align: end;
+    white-space: pre-wrap;
+    font-size: 0.75rem;
+    line-height: 150%;
+
+}
+
+.profil.photo {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+
+@media screen and (max-width: 799px) {
+    .profil.name {
+        font-size: 1rem;
+    }
+
+    .profil.photo {
+        height: 36px;
+        width: 36px;
+    }
+
+    .profil.name {
+        right: 46px;
+    }
+}

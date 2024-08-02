@@ -1,0 +1,40 @@
+.home.container {
+    width: calc(100% - 200px);
+    margin: 100px;
+}
+.home-head-image {
+    filter: brightness(50%);
+}
+
+.home.list {
+    background-color: #f7f7f7;
+    padding: 50px;
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    width: calc(100% - 100px);
+    column-gap: 60px;
+    row-gap: 50px;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 799px) {
+    .home.container {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .home-head-image {
+        height: 111px !important;
+    }
+
+    .home.list {
+        background-color: white;
+        padding: 0;
+        grid-template-columns: 1fr;
+        width: 100%;
+        row-gap: 20px;
+    }
+}
+

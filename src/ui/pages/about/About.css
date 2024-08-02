@@ -1,0 +1,31 @@
+.about.container {
+    margin: 50px 100px 200px 100px;
+    width: calc(100% - 200px);
+}
+
+.about.dp-container {
+    width: calc(100% - 400px);
+    margin: 20px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+@media screen and (max-width: 799px) {
+
+    .about.container {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .about.dp-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .about-image {
+        height: 223px !important;
+        object-position: right;
+    }
+}

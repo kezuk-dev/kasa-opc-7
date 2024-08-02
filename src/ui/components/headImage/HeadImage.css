@@ -1,0 +1,34 @@
+.head-image.container {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+.head-image.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.head-image.title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+
+@media screen and (max-width: 799px) {
+    .head-image.image {
+        height: 111px;
+    }
+
+    .head-image.title {
+        text-align: left;
+    }
+}

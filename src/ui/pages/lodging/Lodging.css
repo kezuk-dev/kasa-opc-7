@@ -1,0 +1,51 @@
+.lodging.container {
+    width: calc(100% - 200px);
+    margin: 30px 100px;
+}
+
+.lodging.infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 0 20px 0;
+}
+
+.lodging.dropdowns {
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+}
+
+.lodging.title {
+    font-size: 1.5rem;
+}
+
+.lodging.location {
+    font-size: 0.75rem;
+    margin: 5px 0 15px 0;
+}
+
+@media screen and (max-width: 799px) {
+
+    .lodging.container {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .lodging.infos {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .lodging.info-right {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lodging.dropdowns {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
