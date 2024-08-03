@@ -14,7 +14,12 @@ function Lodging() {
             .then(res => res.json())
             .then(result => {
                 const elem = result.find(el => el.id === id);
-                setData(elem);
+                if (elem) {
+                    setData(elem);
+                }
+                else {
+                    navigate('/notFound');
+                }
             })
             .catch(() => {
                 navigate('/notFound');
