@@ -15,7 +15,7 @@ function Home() {
       
           }).then(res => res.json())
             .then(result => setData(result));
-    }, [data])
+    }, [])
 
     return(
         <div className='home container'>
