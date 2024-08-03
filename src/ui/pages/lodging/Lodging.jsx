@@ -1,21 +1,28 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Importez useNavigate
 import { DropDown, Profil, Rating, TagList } from '../../components';
 import Caroussel from '../../components/caroussel/Caroussel';
 import './Lodging.css';
 
 function Lodging() {
     const { id } = useParams();
-    const [ data, setData ] = useState([]);
+    const [data, setData] = useState();
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('../data.json')
             .then(res => res.json())
             .then(result => {
-                const elem = result.find(el => el.id === id)
+                const elem = result.find(el => el.id === id);
                 setData(elem);
             })
-    }, [id]);    
+            .catch(() => {
+                navigate('/notFound');
+            });
+    }, [id, navigate]);
+
+    if (!data) { return; }
+
     return (
         <div className='lodging container'>
             {data.pictures && <Caroussel pictures={data.pictures} alt={data.title} />}
